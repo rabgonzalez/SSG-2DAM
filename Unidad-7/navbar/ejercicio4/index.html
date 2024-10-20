@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Marvel</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -25,11 +25,11 @@
         <a class="nav-link active text-white" href="#" aria-current="page"
           >Marvel</a
         >
-        <a class="nav-link text-muted" href="#">Avengers</a>
-        <a class="nav-link text-muted" href="#">X-Men</a>
+        <a class="nav-link text-white opacity-50" href="#">Avengers</a>
+        <a class="nav-link text-white opacity-50" href="#">X-Men</a>
         <li class="nav-item dropdown">
           <a
-            class="nav-link dropdown-toggle text-muted"
+            class="nav-link dropdown-toggle text-white opacity-50"
             data-bs-toggle="dropdown"
             href="#"
             role="button"
@@ -37,23 +37,27 @@
             >Personajes</a
           >
           <ul class="dropdown-menu">
-            <li>
-              <p>Superheroes</p>
-            </li>
-            <dropdown-divider/>
+            <li>Superheroes<hr class="dropdown-divider" /></li>
             <li>
               <a class="dropdown-item" href="#"
-                >Hobbits</a
+                >IronMan</a
               >
             </li>
             <li>
               <a class="dropdown-item" href="#"
-                >Elfos</a
+                >Hulk</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>Villanos<hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" href="#"
+                >Thanos</a
               >
             </li>
             <li>
               <a class="dropdown-item" href="#"
-                >Humanos</a
+                >Mysterio</a
               >
             </li>
           </ul>
@@ -65,9 +69,9 @@
               type="text"
               name="personaje"
               id="personaje"
-              placeholder="Busca un objeto legendario"
+              placeholder="Busca personaje"
             />
-            <button class="text-light border border-white rounded-3 bg-success p-2">
+            <button class="text-light border border-white rounded-3 bg-danger p-2">
               Buscar
             </button>
           </form>
