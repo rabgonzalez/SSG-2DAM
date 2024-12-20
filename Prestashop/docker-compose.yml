@@ -1,7 +1,9 @@
-version: '3'
+version: "3"
 services:
   mysql:
     container_name: some-mysql
+    volumes:
+      - dbdata:/var/lib/mysql # Persistir BBDD
     image: mysql:5.7
     restart: unless-stopped
     environment:
@@ -9,9 +11,21 @@ services:
       MYSQL_DATABASE: prestashop
     networks:
       - prestashop_network
+  
   prestashop:
     container_name: prestashop
-    image: prestashop/prestashop:latest # Latest stable version of the PrestaShop, to see all available images go to ...
+    volumes:
+      - psdata:/var/www/html # Persistir Prestashop
+      - type: volume # Persistir imágenes
+        source: psmedia
+        target: /var/www/html/img
+      - type: volume # Persistir traducciones
+        source: pstranslations
+        target: /var/www/html/translations
+      - type: volume
+        source: pslogs
+        target: /var/log
+    build: .
     restart: unless-stopped
     depends_on:
       - mysql
@@ -24,5 +38,12 @@ services:
       DB_PASSWD: admin
     networks:
       - prestashop_network
+
 networks:
-    prestashop_network:
+  prestashop_network:
+volumes:
+  dbdata: # Persistir BBDD
+  psdata: # Persistir Prestashop
+  psmedia: # Para imágenes
+  pstranslations: # Persistir traducciones
+  pslogs: # Para logs
