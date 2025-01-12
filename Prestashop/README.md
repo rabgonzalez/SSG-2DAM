@@ -17,6 +17,7 @@
     - [Parar el servidor](#parar-el-servidor)
     - [Comprobar que ya no esté en funcionamiento](#comprobar-que-ya-no-esté-en-funcionamiento)
     - [Comprobar que se guardararon los volúmenes](#comprobar-que-se-guardararon-los-volúmenes)
+- [Ejercicio 2](#ejercicio-2)
 
 
 ## Tutorial Prestashop
@@ -190,3 +191,6 @@ local     prestashop_pslogs
 local     prestashop_psmedia
 local     prestashop_pstranslations
 ```
+
+# Ejercicio 2
+- [Ejercicio 2](/Ejercicio2.md)
