@@ -194,3 +194,15 @@ local     prestashop_pstranslations
 
 # Ejercicio 2
 - [Ejercicio 2](/Ejercicio2.md)
+
+```php
+file_put_contents(_PS_ROOT_DIR_.'/youuu.log','YOu fone lingin');
+        $searchQuery = Tools::getValue('search_query');
+        if($searchQuery){
+                $logMessage = '[' . date('Ymd H:i:s') . '] User searched for: ' . $searchQuery . PHP_EOL;
+                file_put_contents(_PS_ROOT_DIR_ . '/var/logs/search.log', $logMessage, FILE_APPEND);
+        } else {
+                file_put_contents(_PS_ROOT_DIR_ . '/var/logs/search.log', 'Yo fone ringin', FILE_APPEND);
+        }
+
+```

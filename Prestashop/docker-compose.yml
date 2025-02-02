@@ -11,6 +11,15 @@ services:
       MYSQL_DATABASE: prestashop
     networks:
       - prestashop_network
+
+  # root > admin
+  cloudbeaver:
+    image: dbeaver/cloudbeaver:23.3.0
+    container_name: cloudbeaver
+    ports:
+      - "8978:8978"
+    networks:
+      - prestashop_network
   
   prestashop:
     container_name: prestashop
